@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: PPS Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 114347033091318306}
   - {fileID: 114136507602948488}
-  - {fileID: 114678644856886786}
+  - {fileID: 114972785607673256}
 --- !u!114 &114136507602948488
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -28,7 +27,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
   m_Name: Grain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -44,7 +43,7 @@ MonoBehaviour:
   lumContrib:
     overrideState: 1
     value: 0.8
---- !u!114 &114347033091318306
+--- !u!114 &114972785607673256
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,72 +52,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
-  m_Name: Vignette
+  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
+  m_Name: Bloom
   m_EditorClassIdentifier: 
   active: 1
   enabled:
     overrideState: 1
     value: 1
-  mode:
-    overrideState: 1
-    value: 0
-  color:
-    overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 1}
-  center:
-    overrideState: 1
-    value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.388
-  smoothness:
-    overrideState: 1
-    value: 0.2
-  roundness:
-    overrideState: 1
     value: 1
-  rounded:
-    overrideState: 1
+  threshold:
+    overrideState: 0
     value: 1
-  mask:
+  softKnee:
+    overrideState: 0
+    value: 0.5
+  clamp:
+    overrideState: 0
+    value: 65472
+  diffusion:
+    overrideState: 0
+    value: 7
+  anamorphicRatio:
+    overrideState: 0
+    value: 0
+  color:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  fastMode:
+    overrideState: 0
+    value: 0
+  dirtTexture:
     overrideState: 0
     value: {fileID: 0}
     defaultState: 1
-  opacity:
-    overrideState: 0
-    value: 1
---- !u!114 &114678644856886786
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
-  m_Name: LensDistortion
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  intensity:
-    overrideState: 1
-    value: 25
-  intensityX:
-    overrideState: 0
-    value: 1
-  intensityY:
-    overrideState: 0
-    value: 1
-  centerX:
+  dirtIntensity:
     overrideState: 0
     value: 0
-  centerY:
-    overrideState: 0
-    value: 0
-  scale:
-    overrideState: 1
-    value: 1
