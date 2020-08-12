@@ -15,8 +15,10 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp == 0)//HPが尽きたら消滅とスコア加算・・・どこに？
+        if (hp == 0)//HPが尽きたら消滅とスコア加算
         {
+            //Scoreコンポーネントを取得してポイントを追加
+            FindObjectOfType<Score>().AddPoint(point);
             Destroy(gameObject);
         }
     }
