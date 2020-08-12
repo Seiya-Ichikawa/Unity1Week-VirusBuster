@@ -16,10 +16,8 @@ public class TitleDirector : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             FadeManager.Instance.LoadScene("MenuScene", 2.0f);
-            //効果音を鳴らす
-            //GetComponent<AudioSource>().Play();
             CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
-            fadeValue.NoiseX = 1;//1になるまで徐々に値を増やしたい
+            fadeValue.NoiseX = 1;
         }
     }
 }
