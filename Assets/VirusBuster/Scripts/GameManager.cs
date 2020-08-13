@@ -6,9 +6,10 @@ public class GameManager : MonoBehaviour
 {
     GameObject[] enemyObjects;
     float timer = 0.0f;
-    float interval = 4.0f;//Checkの呼び出し頻度
+    float interval = 3.5f;//Checkの呼び出し頻度
     int numberOfEnemy = 0;
-    int limitNumber = 80;
+    int limitNumber = 70;
+
     void Start()
     {
 
@@ -21,20 +22,22 @@ public class GameManager : MonoBehaviour
         if (timer > interval)
         {
             Check("Enemy");
+            CheckCameraEffect();
             timer = 0;
         }
+
         //一定数以上でGameOver
         if (numberOfEnemy > limitNumber)
         {
-            Debug.Log("GameOver");
             GameOver();
+            numberOfEnemy = 0;//この記述がないと何度もGameOverメソッドが呼ばれる
         }
-
     }
 
     public void GameOver()
     {
-        GetComponent<EnemyGenerator>().enabled = false;//生成停止
+        EnemyGenerator enemyGenerator = GameObject.Find("EnemyGenerator").GetComponent<EnemyGenerator>();
+        enemyGenerator.GetComponent<EnemyGenerator>().enabled = false;//生成停止
         FadeManager.Instance.LoadScene("GameOverScene", 2.0f);
         CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
         fadeValue.NoiseX = 1;
@@ -43,8 +46,26 @@ public class GameManager : MonoBehaviour
     public void Check(string tagName)
     {
         enemyObjects = GameObject.FindGameObjectsWithTag(tagName);
-        Debug.Log(enemyObjects.Length);//あとでコメントアウト。これで個数取得
+        //Debug.Log(enemyObjects.Length);//あとでコメントアウト。これで個数取得
         numberOfEnemy = enemyObjects.Length;
+    }
+    public void CheckCameraEffect()
+    {
+        if (numberOfEnemy > 50)//画面効果
+        {
+            CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
+            fadeValue.NoiseX = 0.05f;
+        }
+        else if (numberOfEnemy > 60)
+        {
+            CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
+            fadeValue.NoiseX = 0.15f;
+        }
+        else
+        {
+            CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
+            fadeValue.NoiseX = 0.008f;
+        }
     }
 }
 

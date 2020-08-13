@@ -11,7 +11,7 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] float acceleration = 5.0f;//値が小さいほど早くなる
     float delta = 0;//経過時間
     float elapsedTime = 0;//最初からの経過時間
-    float stopAcceleration = 0.2f;//この値以上加速の停止
+    float stopAcceleration = 0.15f;//この値以上加速の停止
 
     void Start()
     {
