@@ -8,17 +8,19 @@ public class EnemyGenerator : MonoBehaviour
     int[] table = new int[] { 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 2 };
     int type = 0;
     [SerializeField] float span = 1.0f;
-    float delta = 0;
+    [SerializeField] float acceleration = 5.0f;//値が小さいほど早くなる
+    float delta = 0;//経過時間
+    float elapsedTime = 0;//最初からの経過時間
+    float stopAcceleration = 0.2f;//この値以上加速の停止
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
+        elapsedTime += Time.deltaTime;
         delta += Time.deltaTime;
         if (delta > span)
         {
@@ -28,5 +30,18 @@ public class EnemyGenerator : MonoBehaviour
             type++;
             type %= table.Length;
         }
+        if (elapsedTime > acceleration)//生成速度の加速
+        {
+            if (span <= stopAcceleration) return;
+            elapsedTime = 0;
+            span -= 0.1f;
+        }
+        //画面内に一定数以上のEnemyオブジェクトが出現したらGameOver
+        /*
+        if ()
+        {
+            //GameManagerコンポーネントをシーン内から探して取得し、GameOverメソッドを呼び出す
+            FindObjectOfType<GameManager>().GameOver();
+        }*/
     }
 }

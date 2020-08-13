@@ -66,3 +66,12 @@ Fonts/
 
 # Import Sounds
 Sounds/
+
+# OnlineRanking
+NCMB/
+
+# from NCMB
+Editor/
+
+# from NCMB
+Plugins/
