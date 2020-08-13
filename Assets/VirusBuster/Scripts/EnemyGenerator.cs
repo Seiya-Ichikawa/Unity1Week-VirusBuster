@@ -36,12 +36,5 @@ public class EnemyGenerator : MonoBehaviour
             elapsedTime = 0;
             span -= 0.1f;
         }
-        //画面内に一定数以上のEnemyオブジェクトが出現したらGameOver
-        /*
-        if ()
-        {
-            //GameManagerコンポーネントをシーン内から探して取得し、GameOverメソッドを呼び出す
-            FindObjectOfType<GameManager>().GameOver();
-        }*/
     }
 }
