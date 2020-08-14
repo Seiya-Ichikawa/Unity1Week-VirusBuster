@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text scoreText;
-    private int score;
+    private int score;//これをGameOverSceneまで持っていきたい
 
     void Start()
     {
-
+        InitializeScore();
     }
 
     void Update()
@@ -31,4 +31,11 @@ public class Score : MonoBehaviour
     {
         score = 0;
     }
+    //プロパティ
+    public int ScoreProperty
+    {
+        set { score = value; }
+        get { return score; }
+    }
+
 }

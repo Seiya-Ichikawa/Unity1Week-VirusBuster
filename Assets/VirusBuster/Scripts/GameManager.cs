@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
         //一定数以上でGameOver
         if (numberOfEnemy > limitNumber)
         {
+            Score hoge = GameObject.Find("Score").GetComponent<Score>();
+            PlayerPrefs.SetInt("SaveScore", hoge.ScoreProperty);
+            PlayerPrefs.Save();
             GameOver();
             numberOfEnemy = 0;//この記述がないと何度もGameOverメソッドが呼ばれる
         }
@@ -71,7 +74,5 @@ public class GameManager : MonoBehaviour
 
 
 
-//        // ハイスコアの保存
 //FindObjectOfType<Score>().Save();
 //Scoreコンポーネントを探して、そこのSaveメソッドを出す
-//こいつはScoreScriptにSaveのメソッドを追加やな
