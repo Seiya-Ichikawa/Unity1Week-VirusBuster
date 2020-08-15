@@ -17,9 +17,13 @@ public class EnemyController : MonoBehaviour
     {
         if (hp == 0)//HPが尽きたら消滅とスコア加算
         {
+            //コンボ表示
+            ComboSystem combo = GameObject.Find("ComboSystem").GetComponent<ComboSystem>();
+            combo.IncreaseCombo();
+            //SE流し
             SEManager.Instance.Play(
                 audioPath: SEPath.RETRO12,
-                volumeRate: 0.15f
+                volumeRate: 0.1f
                 );
             //Scoreコンポーネントを取得してポイントを追加
             FindObjectOfType<Score>().AddPoint(point);
