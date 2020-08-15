@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
     void Update()
     {
         //スコアの表示
-        scoreText.text = "Score : " + score.ToString();
+        scoreText.text = "SCORE : " + score.ToString();
 
     }
 
