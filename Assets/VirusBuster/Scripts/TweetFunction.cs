@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KanKikuchi.AudioManager;
 
 public class TweetFunction : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class TweetFunction : MonoBehaviour
 
     public void Tweet()
     {
+        SEManager.Instance.Play(SEPath.SYSTEM22);
         ScoreManager hoge = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         tweetScore = hoge.GameOverScore;
         //本文＋ハッシュタグ＊２ツイート（画像なし）
