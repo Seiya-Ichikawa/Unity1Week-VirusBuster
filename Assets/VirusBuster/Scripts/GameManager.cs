@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KanKikuchi.AudioManager;
 
 public class GameManager : MonoBehaviour
 {
@@ -56,11 +57,29 @@ public class GameManager : MonoBehaviour
     {
         if (numberOfEnemy > 50)//画面効果
         {
+            //BGMの調節
+            BGMManager.Instance.FadeOut(2);
+            //ノイズの追加
+            BGMManager.Instance.Play(
+            audioPath: SEPath.NOISE,
+            volumeRate: 0.2f,
+            isLoop: true,
+            allowsDuplicate: true
+            );
+
             CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
             fadeValue.NoiseX = 0.05f;
         }
         else if (numberOfEnemy > 60)
         {
+            //ノイズの拡大
+            BGMManager.Instance.Play(
+            audioPath: SEPath.NOISE,
+            volumeRate: 0.4f,
+            isLoop: true,
+            allowsDuplicate: false
+            );
+
             CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
             fadeValue.NoiseX = 0.15f;
         }
@@ -71,8 +90,3 @@ public class GameManager : MonoBehaviour
         }
     }
 }
-
-
-
-//FindObjectOfType<Score>().Save();
-//Scoreコンポーネントを探して、そこのSaveメソッドを出す
