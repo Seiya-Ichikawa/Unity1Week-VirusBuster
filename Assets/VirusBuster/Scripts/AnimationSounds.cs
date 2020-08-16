@@ -43,6 +43,11 @@ public class AnimationSounds : MonoBehaviour
             );
     }
 
+    void AlarmSEFadeOut()
+    {
+        SEManager.Instance.FadeOut(SEPath.ALERM, 1);
+    }
+
     void ChangeBackgroundColor()
     {
         cam = Camera.main;

@@ -20,8 +20,8 @@ public class GoToGame : MonoBehaviour
 
         SEManager.Instance.Play(SEPath.SYSTEM22);
         FadeManager.Instance.LoadScene("GameScene", 2.0f);
-        CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
-        fadeValue.NoiseX = 1;
+        //CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
+        //fadeValue.NoiseX = 1;
     }
 
 }
