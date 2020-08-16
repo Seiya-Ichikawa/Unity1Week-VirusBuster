@@ -9,7 +9,7 @@ public class TitleDirector : MonoBehaviour
     {
         BGMManager.Instance.Play(
             audioPath: SEPath.NOISE,
-            volumeRate: 0.1f,
+            volumeRate: 0.08f,
             isLoop: true,
             allowsDuplicate: false
             );

@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using KanKikuchi.AudioManager;
 
-public class GameOverMusic : MonoBehaviour
+public class MenuMusic : MonoBehaviour
 {
     void Start()
     {
         BGMManager.Instance.Play(
-           audioPath: BGMPath.MORSE,
-           volumeRate: 0.17f,
+           audioPath: SEPath.NOISE,
+           volumeRate: 0.08f,
            isLoop: true,
            allowsDuplicate: false
            );
-        BGMManager.Instance.FadeIn(0.5f);
-
+        BGMManager.Instance.FadeIn(1);
     }
 
     void Update()
