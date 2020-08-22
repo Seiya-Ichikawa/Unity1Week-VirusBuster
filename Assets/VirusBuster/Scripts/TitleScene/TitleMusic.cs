@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using KanKikuchi.AudioManager;
 
-public class TitleDirector : MonoBehaviour
+public class TitleMusic : MonoBehaviour
 {
     void Start()
     {
@@ -21,9 +21,6 @@ public class TitleDirector : MonoBehaviour
         {
             BGMManager.Instance.FadeOut(1);
             SEManager.Instance.Play(SEPath.SYSTEM22);
-            FadeManager.Instance.LoadScene("MenuScene", 2.0f);
-            CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
-            fadeValue.NoiseX = 1;
         }
     }
 }
