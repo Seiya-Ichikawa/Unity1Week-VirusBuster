@@ -15,9 +15,4 @@ public class MenuMusic : MonoBehaviour
            );
         BGMManager.Instance.FadeIn(1);
     }
-
-    void Update()
-    {
-        
-    }
 }

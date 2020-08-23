@@ -5,17 +5,6 @@ using KanKikuchi.AudioManager;
 
 public class AnimationSounds : MonoBehaviour
 {
-    Camera cam;
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
     void VirusSE()
     {
         SEManager.Instance.Play(
@@ -46,11 +35,5 @@ public class AnimationSounds : MonoBehaviour
     void AlarmSEFadeOut()
     {
         SEManager.Instance.FadeOut(SEPath.ALERM, 1);
-    }
-
-    void ChangeBackgroundColor()
-    {
-        cam = Camera.main;
-        cam.backgroundColor = Color.red;
     }
 }
