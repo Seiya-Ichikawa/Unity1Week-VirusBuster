@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseScript : MonoBehaviour
+public class PauseCall : MonoBehaviour
 {
     [SerializeField] private GameObject pauseUIPrefab;
     private GameObject pauseUIInstance;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (pauseUIInstance == null)
             {
@@ -21,5 +21,11 @@ public class PauseScript : MonoBehaviour
                 Time.timeScale = 1f;
             }
         }
+    }
+
+    public GameObject PauseUIInstance
+    {
+        set { pauseUIInstance = value; }
+        get { return pauseUIInstance; }
     }
 }

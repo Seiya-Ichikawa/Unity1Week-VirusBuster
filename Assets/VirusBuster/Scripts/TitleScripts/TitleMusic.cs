@@ -17,6 +17,11 @@ public class TitleMusic : MonoBehaviour
 
     void Update()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f))
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             BGMManager.Instance.FadeOut(1);
