@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KanKikuchi.AudioManager;
 
 public class PauseCloseButton : MonoBehaviour
 {
@@ -11,5 +12,10 @@ public class PauseCloseButton : MonoBehaviour
         pauseCanvas = pauseUI.PauseUIInstance;
         Destroy(pauseCanvas);
         Time.timeScale = 1f;
+    }
+
+    public void CloseButtonSE()
+    {
+        SEManager.Instance.Play(SEPath.SYSTEM22);
     }
 }
