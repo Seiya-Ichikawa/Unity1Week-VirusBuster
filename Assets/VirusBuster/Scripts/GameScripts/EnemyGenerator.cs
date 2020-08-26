@@ -13,11 +13,6 @@ public class EnemyGenerator : MonoBehaviour
     float elapsedTime = 0;//最初からの経過時間
     float stopAcceleration = 0.15f;//この値以上加速の停止
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         elapsedTime += Time.deltaTime;

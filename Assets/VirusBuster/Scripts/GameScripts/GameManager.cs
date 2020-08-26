@@ -6,15 +6,12 @@ using KanKikuchi.AudioManager;
 public class GameManager : MonoBehaviour
 {
     GameObject[] enemyObjects;
-    float timer = 0.0f;
+    float timer = 0.0f;     //時間経過
     float interval = 3.5f;  //Checkの呼び出し頻度
-    int numberOfEnemy = 0;
-    int limitNumber = 70;
-
-    void Start()
-    {
-
-    }
+    int numberOfEnemy = 0;  //シーン上の敵の数
+    int limitNumber = 70;   //出現限界数
+    [SerializeField] private Score score;
+    [SerializeField] private CRT crtCamera;
 
     void Update()
     {
@@ -30,8 +27,7 @@ public class GameManager : MonoBehaviour
         //一定数以上でGameOver
         if (numberOfEnemy > limitNumber)
         {
-            Score hoge = GameObject.Find("Score").GetComponent<Score>();
-            PlayerPrefs.SetInt("SaveScore", hoge.ScoreProperty);
+            PlayerPrefs.SetInt("SaveScore", score.ScoreProperty);
             PlayerPrefs.Save();
             GameOver();
             numberOfEnemy = 0;//この記述がないと何度もGameOverメソッドが呼ばれる
@@ -43,14 +39,13 @@ public class GameManager : MonoBehaviour
         EnemyGenerator enemyGenerator = GameObject.Find("EnemyGenerator").GetComponent<EnemyGenerator>();
         enemyGenerator.GetComponent<EnemyGenerator>().enabled = false;//生成停止
         FadeManager.Instance.LoadScene("GameOverScene", 2.0f);
-        CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
-        fadeValue.NoiseX = 1;
+        crtCamera.NoiseX = 1;
     }
 
     public void Check(string tagName)
     {
         enemyObjects = GameObject.FindGameObjectsWithTag(tagName);
-        //Debug.Log(enemyObjects.Length);//あとでコメントアウト。これで個数取得
+        //Debug.Log(enemyObjects.Length);//個数取得と表示(デバッグ用)
         numberOfEnemy = enemyObjects.Length;
     }
     public void CheckCameraEffect()
@@ -67,8 +62,7 @@ public class GameManager : MonoBehaviour
             allowsDuplicate: true
             );
 
-            CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
-            fadeValue.NoiseX = 0.05f;
+            crtCamera.NoiseX = 0.05f;
         }
         else if (numberOfEnemy > 60)
         {
@@ -80,13 +74,11 @@ public class GameManager : MonoBehaviour
             allowsDuplicate: false
             );
 
-            CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
-            fadeValue.NoiseX = 0.15f;
+            crtCamera.NoiseX = 0.15f;
         }
         else
         {
-            CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
-            fadeValue.NoiseX = 0.008f;
+            crtCamera.NoiseX = 0.008f;
         }
     }
 }

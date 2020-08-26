@@ -10,7 +10,8 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (hp == 0)//HPが尽きたら消滅とスコア加算
+        //HPが尽きたら消滅とスコア加算
+        if (hp == 0)
         {
             //コンボ表示
             ComboSystem combo = GameObject.Find("ComboSystem").GetComponent<ComboSystem>();
@@ -21,7 +22,6 @@ public class EnemyController : MonoBehaviour
                 volumeRate: 0.1f
                 );
             //Scoreコンポーネントを取得してポイントを追加
-            //FindObjectOfType<Score>().AddPoint(point); 
             Score score = GameObject.Find("Score").GetComponent<Score>();
             score.AddPoint(point);
             Destroy(gameObject);
@@ -30,9 +30,13 @@ public class EnemyController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f))
+        {
+            return;
+        }
+
         SEManager.Instance.Play(SEPath.CLICK);
         hp -= 1;
-        //Debug.Log("ゲームオブジェクトがクリックされました");
     }
- 
+
 }
