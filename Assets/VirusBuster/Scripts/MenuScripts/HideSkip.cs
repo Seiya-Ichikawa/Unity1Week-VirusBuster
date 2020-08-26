@@ -10,7 +10,7 @@ public class HideSkip : MonoBehaviour
     {
         //ShowSkipのスクリプト停止
         ShowSkip showSkip = GameObject.Find("MenuManager").GetComponent<ShowSkip>();
-        showSkip.GetComponent<ShowSkip>().enabled = false;
+        showSkip.enabled = false;
 
         if (skipButton.activeSelf == true)
         {

@@ -14,5 +14,8 @@ public class LoadGameScene : MonoBehaviour
 
         SEManager.Instance.Play(SEPath.SYSTEM22);
         FadeManager.Instance.LoadScene("GameScene", 2.0f);
+        //全てのSEとBGMをフェードアウト
+        BGMManager.Instance.FadeOut(2);
+        SEManager.Instance.FadeOut(2);
     }
 }

@@ -10,7 +10,7 @@ public class ActiveHideSkipScript : MonoBehaviour
         {
             //StartButtonが表示されたら、HideSkipスクリプトを有効化
             HideSkip hideSkip = GameObject.Find("StartButton").GetComponent<HideSkip>();
-            hideSkip.GetComponent<HideSkip>().enabled = true;
+            hideSkip.enabled = true;
         }
     }
 }

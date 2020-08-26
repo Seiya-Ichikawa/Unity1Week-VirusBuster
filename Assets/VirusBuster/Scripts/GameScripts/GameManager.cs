@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         EnemyGenerator enemyGenerator = GameObject.Find("EnemyGenerator").GetComponent<EnemyGenerator>();
-        enemyGenerator.GetComponent<EnemyGenerator>().enabled = false;//生成停止
+        enemyGenerator.enabled = false;//生成停止
         FadeManager.Instance.LoadScene("GameOverScene", 2.0f);
         crtCamera.NoiseX = 1;
     }
