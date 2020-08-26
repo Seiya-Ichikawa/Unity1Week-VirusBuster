@@ -7,6 +7,11 @@ public class LoadGameScene : MonoBehaviour
 {
     public void ChangeToGameScene()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f))
+        {
+            return;
+        }
+
         SEManager.Instance.Play(SEPath.SYSTEM22);
         FadeManager.Instance.LoadScene("GameScene", 2.0f);
     }

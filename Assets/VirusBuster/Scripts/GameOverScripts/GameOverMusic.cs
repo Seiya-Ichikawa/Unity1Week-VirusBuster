@@ -16,9 +16,4 @@ public class GameOverMusic : MonoBehaviour
         BGMManager.Instance.FadeIn(0.5f);
 
     }
-
-    void Update()
-    {
-        
-    }
 }

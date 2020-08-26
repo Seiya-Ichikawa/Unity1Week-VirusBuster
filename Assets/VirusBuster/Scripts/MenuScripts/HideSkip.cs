@@ -5,6 +5,7 @@ using UnityEngine;
 public class HideSkip : MonoBehaviour
 {
     [SerializeField] GameObject skipButton;
+
     void Start()
     {
         //ShowSkipのスクリプト停止

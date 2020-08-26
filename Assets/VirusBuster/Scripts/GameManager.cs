@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     GameObject[] enemyObjects;
     float timer = 0.0f;
-    float interval = 3.5f;//Checkの呼び出し頻度
+    float interval = 3.5f;  //Checkの呼び出し頻度
     int numberOfEnemy = 0;
     int limitNumber = 70;
 

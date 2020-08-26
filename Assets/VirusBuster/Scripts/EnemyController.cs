@@ -8,11 +8,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] int hp = 1;//ヒットポイント
     [SerializeField] int point = 100;//撃破時のスコアポイント
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (hp == 0)//HPが尽きたら消滅とスコア加算
@@ -26,7 +21,9 @@ public class EnemyController : MonoBehaviour
                 volumeRate: 0.1f
                 );
             //Scoreコンポーネントを取得してポイントを追加
-            FindObjectOfType<Score>().AddPoint(point);
+            //FindObjectOfType<Score>().AddPoint(point); 
+            Score score = GameObject.Find("Score").GetComponent<Score>();
+            score.AddPoint(point);
             Destroy(gameObject);
         }
     }
@@ -37,5 +34,5 @@ public class EnemyController : MonoBehaviour
         hp -= 1;
         //Debug.Log("ゲームオブジェクトがクリックされました");
     }
-
+ 
 }

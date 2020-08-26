@@ -5,20 +5,12 @@ using KanKikuchi.AudioManager;
 
 public class BackToGame : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    [SerializeField] private CRT crtCamera;
 
-    void Update()
-    {
-        
-    }
     public void BackGame()
     {
         SEManager.Instance.Play(SEPath.SYSTEM22);
         FadeManager.Instance.LoadScene("GameScene", 2.0f);
-        CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
-        fadeValue.NoiseX = 1;
+        crtCamera.NoiseX = 1;
     }
 }

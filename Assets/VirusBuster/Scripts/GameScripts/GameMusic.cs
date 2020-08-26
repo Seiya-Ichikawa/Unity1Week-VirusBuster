@@ -7,7 +7,6 @@ public class GameMusic : MonoBehaviour
 {
     void Start()
     {
-
         BGMManager.Instance.Play(
             audioPath: BGMPath.G,
             volumeRate: 0.3f,
@@ -15,10 +14,5 @@ public class GameMusic : MonoBehaviour
             allowsDuplicate: false
             );
         BGMManager.Instance.FadeIn(1);
-    }
-
-    void Update()
-    {
-
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6253546881565037171}
   - component: {fileID: 6253546881565037170}
   - component: {fileID: 6812969881935560293}
+  - component: {fileID: 721614674878259082}
   m_Layer: 0
   m_Name: PauseController
   m_TagString: Untagged
@@ -56,5 +57,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc6823f7e948a6148a3fea8827e47ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &721614674878259082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6253546881565037169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f56909677441154d927c5c040f1a75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

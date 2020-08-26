@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TitleCameraEffect : MonoBehaviour
 {
+    [SerializeField] private CRT crtCamera;
+
     void Update()
     {
         if (Mathf.Approximately(Time.timeScale, 0f))
@@ -13,8 +15,7 @@ public class TitleCameraEffect : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            CRT fadeValue = GameObject.Find("Main Camera").GetComponent<CRT>();
-            fadeValue.NoiseX = 1;
+            crtCamera.NoiseX = 1;
         }
     }
 }

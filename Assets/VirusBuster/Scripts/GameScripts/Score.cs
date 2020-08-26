@@ -17,7 +17,6 @@ public class Score : MonoBehaviour
     {
         //スコアの表示
         scoreText.text = "SCORE : " + score.ToString();
-
     }
 
     //ポイントの追加
@@ -31,6 +30,7 @@ public class Score : MonoBehaviour
     {
         score = 0;
     }
+
     //プロパティ
     public int ScoreProperty
     {

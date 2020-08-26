@@ -6,6 +6,7 @@ using KanKikuchi.AudioManager;
 public class PauseCloseButton : MonoBehaviour
 {
     private GameObject pauseCanvas;
+
     public void ClosePauseButton()
     {
         PauseCall pauseUI = GameObject.Find("PauseController").GetComponent<PauseCall>();
