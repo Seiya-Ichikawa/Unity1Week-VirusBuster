@@ -12,5 +12,8 @@ public class BackToTitle : MonoBehaviour
         SEManager.Instance.Play(SEPath.SYSTEM22);
         FadeManager.Instance.LoadScene("TitleScene", 2.0f);
         crtCamera.NoiseX = 1;
+        //全てのSEとBGMをフェードアウト
+        BGMManager.Instance.FadeOut(2);
+        SEManager.Instance.FadeOut(2);
     }
 }

@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
             //SE流し
             SEManager.Instance.Play(
                 audioPath: SEPath.RETRO12,
-                volumeRate: 0.1f
+                volumeRate: 0.15f
                 );
             //Scoreコンポーネントを取得してポイントを追加
             Score score = GameObject.Find("Score").GetComponent<Score>();
@@ -35,7 +35,10 @@ public class EnemyController : MonoBehaviour
             return;
         }
 
-        SEManager.Instance.Play(SEPath.CLICK);
+        SEManager.Instance.Play(
+            audioPath: SEPath.CLICK,
+            volumeRate: 0.25f
+            );
         hp -= 1;
     }
 

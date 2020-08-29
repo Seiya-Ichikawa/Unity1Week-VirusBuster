@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KanKikuchi.AudioManager;
 
 public class LoadMenuScene : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class LoadMenuScene : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             FadeManager.Instance.LoadScene("MenuScene", 2.0f);
+            //全てのSEとBGMをフェードアウト
+            BGMManager.Instance.FadeOut(2);
+            SEManager.Instance.FadeOut(2);
         }
     }
 }
