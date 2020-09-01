@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             //ノイズの追加
             BGMManager.Instance.Play(
             audioPath: SEPath.NOISE,
-            volumeRate: 0.1f,
+            volumeRate: 0.08f,
             isLoop: true,
             allowsDuplicate: true
             );
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
             //ノイズの拡大
             BGMManager.Instance.Play(
             audioPath: SEPath.NOISE,
-            volumeRate: 0.3f,
+            volumeRate: 0.28f,
             isLoop: true,
             allowsDuplicate: false
             );

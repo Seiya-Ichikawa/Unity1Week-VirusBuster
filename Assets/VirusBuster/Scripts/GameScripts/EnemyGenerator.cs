@@ -27,7 +27,7 @@ public class EnemyGenerator : MonoBehaviour
         }
         if (elapsedTime > acceleration)//生成速度の加速
         {
-            if (span <= stopAcceleration) return;
+            if (span <= stopAcceleration) { return; }
             elapsedTime = 0;
             span -= 0.1f;
         }

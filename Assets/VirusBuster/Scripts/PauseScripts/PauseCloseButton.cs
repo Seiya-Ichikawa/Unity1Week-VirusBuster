@@ -13,6 +13,8 @@ public class PauseCloseButton : MonoBehaviour
         pauseCanvas = pauseUI.PauseUIInstance;
         Destroy(pauseCanvas);
         Time.timeScale = 1f;
+        //全てのBGMを再開
+        BGMManager.Instance.UnPause();
     }
 
     public void CloseButtonSE()
