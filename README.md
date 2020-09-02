@@ -1,5 +1,6 @@
 # Unity1Week-VirusBuster
 Unity1Week制作ゲーム、お題「ふえる」
+ゲームタイトル「VirusBuster」
 
 ## DEMO
 
@@ -12,4 +13,4 @@ Unity1Week制作ゲーム、お題「ふえる」
 * 作成者：市川聖也(Seiya Ichikawa)
 * 所属：未所属
 * E-mail：seiya.ichikawa0628@gmail.com
- 
+* Twitter:@Machio_Kinniku
