@@ -964,6 +964,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6253546881565037170, guid: 0e4798b59e2b7be46ad9ac92ade3897a,
+        type: 3}
+      propertyPath: pauseUICanvas
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6253546881565037170, guid: 0e4798b59e2b7be46ad9ac92ade3897a,
+        type: 3}
+      propertyPath: pauseUIPrefab
+      value: 
+      objectReference: {fileID: 7224479665412255259, guid: 29aef303639aeaa409eb06761b2f9c58,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e4798b59e2b7be46ad9ac92ade3897a, type: 3}
 --- !u!1001 &6715814858731322550

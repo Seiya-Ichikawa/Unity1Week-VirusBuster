@@ -2899,6 +2899,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseController
       objectReference: {fileID: 0}
+    - target: {fileID: 6253546881565037169, guid: 0e4798b59e2b7be46ad9ac92ade3897a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6253546881565037171, guid: 0e4798b59e2b7be46ad9ac92ade3897a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2954,6 +2959,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6253546881565037170, guid: 0e4798b59e2b7be46ad9ac92ade3897a,
+        type: 3}
+      propertyPath: pauseUIPrefab
+      value: 
+      objectReference: {fileID: 7224479665412255259, guid: 29aef303639aeaa409eb06761b2f9c58,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e4798b59e2b7be46ad9ac92ade3897a, type: 3}
 --- !u!114 &2138261776 stripped

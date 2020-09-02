@@ -11,7 +11,8 @@ public class PauseCloseButton : MonoBehaviour
     {
         PauseCall pauseUI = GameObject.Find("PauseController").GetComponent<PauseCall>();
         pauseCanvas = pauseUI.PauseUIInstance;
-        Destroy(pauseCanvas);
+        //Destroy(pauseCanvas);//破棄から非アクティブに変更
+        pauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         //全てのBGMを再開
         BGMManager.Instance.UnPause();
